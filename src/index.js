@@ -1,15 +1,15 @@
-const deg = 6;
-const hr = document.querySelector('#hr');
-const mn = document.querySelector('#mn');
-const sc = document.querySelector('#sc');
+var deg = 6;
+var hr = document.querySelector("#hr");
+var mn = document.querySelector("#mn");
+var sc = document.querySelector("#sc");
 
 setInterval(() => {
-  let day = new Date();
-  let hh = day.getHours() * 30;
-  let mm = day.getMinutes() * deg;
-  let ss = day.getSeconds() * deg;
+  var day = new Date();
+  var hh = day.getHours() * 30;
+  var mm = day.getMinutes() * deg;
+  var ss = day.getSeconds() * deg;
 
-  hr.style.transform = 'rotateZ(' +(hh+(mm/12)) + 'deg)';
-  mn.style.transform = 'rotateZ(' + mm + 'deg)';
-  sc.style.transform = 'rotateZ(' + ss + 'deg)';
+  hr.style.transform = "rotateZ(" + (hh + mm / 12) + "deg)";
+  mn.style.transform = "rotateZ(" + mm + "deg)";
+  sc.style.transform = "rotateZ(" + ss + "deg)";
 });
